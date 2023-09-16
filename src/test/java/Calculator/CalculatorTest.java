@@ -87,7 +87,7 @@ public class CalculatorTest {
         Assertions.assertThat(Calculator.calculatingDiscount(10, 2)).isEqualTo(9.8);
         Assertions.assertThat(Calculator.calculatingDiscount(10, 0)).isEqualTo(10.0);
 
-        assertThatThrownBy(() -> Calculator.calculatingDiscount(10, -1)).isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(() -> Calculator.calculatingDiscount(10, -1)).isInstanceOf(ArithmeticException.class);
 
     }
 }

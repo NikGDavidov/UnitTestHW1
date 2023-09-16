@@ -54,7 +54,7 @@ public class Calculator {
     public static double calculatingDiscount(double purchaseAmount, int discountAmount) {
         // purchaseAmount - сумма покупки
         // discountAmount - размер скидки
-        if (purchaseAmount <=0 || discountAmount<0) throw new IllegalArgumentException("Недопустимое значение аргументов");
+        if (purchaseAmount <=0 || discountAmount<0) throw new ArithmeticException("Недопустимое значение аргументов");
         return  Math.round(purchaseAmount*(1-discountAmount/100.0)*100.0)/100.0; // Метод должен возвращать сумму покупки со скидкой
     }
 }
